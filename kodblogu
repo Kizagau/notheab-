@@ -1,0 +1,62 @@
+import java.util.Scanner;
+
+public class sinif {
+    public static void main(String[] args) {
+        int mat, fizik, turkce, kimya, muzik;
+        Scanner inp = new Scanner(System.in);
+
+        int toplam = 0, count = 0;
+
+        System.out.print("Matematik notunuz :");
+        mat = inp.nextInt();
+
+        System.out.print("Fizik notunuz :");
+        fizik = inp.nextInt();
+
+        System.out.print("Türkçe notunuz :");
+        turkce = inp.nextInt();
+
+        System.out.print("Kimya notunuz :");
+        kimya = inp.nextInt();
+
+        System.out.print("Müzik notunuz :");
+        muzik = inp.nextInt();
+
+
+        if (mat > 0 && mat < 100) {
+            toplam += mat;
+            count++;
+        }
+        if (fizik > 0 && fizik < 100) {
+            toplam += fizik;
+            count++;
+        }
+        if (turkce > 0 && turkce < 100) {
+            toplam += turkce;
+            count++;
+        }
+        if (kimya > 0 && kimya < 100) {
+            toplam += kimya;
+            count++;
+        }
+        if (muzik > 0 && muzik < 100) {
+            toplam += muzik;
+            count++;
+        }
+        System.out.println("Ortalamınız :"+ (toplam/count));
+
+        double ortalama = (toplam/count);
+
+        if (ortalama <= 55) {
+            System.out.println("Sınıf tekrarı!");
+        }else {
+            System.out.println("Sınıfı geçtiniz!");
+        }
+
+
+        }
+
+
+
+
+    }
